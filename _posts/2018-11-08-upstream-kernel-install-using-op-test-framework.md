@@ -1,6 +1,5 @@
 # Install/boot Upstream Kernel on IBM OpenPower boxes using op-test-framework.
 
-
 ## Introduction to op-test-framework:
 [op-test-framework](https://github.com/open-power/op-test-framework) is a python unittest based test suite for validating IBM OpenPower boxes, which comprises many tests including booting host with multiple configurations etc.
 
@@ -25,7 +24,7 @@ $cd op-test-framework
 $wget https://patch-diff.githubusercontent.com/raw/open-power/op-test-framework/pull/293.patch;git am 293.patch
 ```
 
-2. Create a machine.conf to match the host(SUT) that you want to install upstream kernel like below
+2. Create a machine.conf to match the host(SUT) that you want to install upstream kernel like below 
 
 ```
 [op-test]
@@ -51,12 +50,12 @@ machine_state=OS
 Explanation of config file
 - git_repo - upstream kernel repository to be used
 - git_branch - brach of upstream kernel repository to be used
-- git_repoconfigpath(optional) - kernel config can be supplied as url or local path, by default `ppc64le_defconfig` will be used
+- git_repoconfigpath(optional) - kernel config can be supplied as url or local path, by default ppc64le_defconfig will be used
 - git_patch(optional) - any incremental patch to be applied on top of above kernel repository
-- git_home(optional) - base path for kernel repository clone, by default `/home/ci` will be used
+- git_home(optional) - base path for kernel repository clone, by default /home/ci will be used
 ```
 
-3. Running Upstream Kernel Install test....
+3. Running Upstream Kernel Install test.... 
 
 ```
 $./op-test -c machine.conf --run testcases.InstallUpstreamKernel.InstallUpstreamKernel
