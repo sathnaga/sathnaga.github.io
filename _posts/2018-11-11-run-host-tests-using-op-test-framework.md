@@ -4,8 +4,7 @@
 [op-test-framework](https://github.com/open-power/op-test-framework) is a python unittest based test suite for validating IBM OpenPower boxes, which comprises many tests including booting host with multiple configurations etc.
 
 ## Test enables the support:
-[op-test-framework/testcases/RunHostTest.py
-](https://github.com/open-power/op-test-framework/blob/master/testcases/RunHostTest.py)
+[RunHostTest.py](https://github.com/open-power/op-test-framework/blob/master/testcases/RunHostTest.py)
 
 ## Why to run other framework tests through op-test-framework:
 op-test-framework has it own benefits like
@@ -23,11 +22,11 @@ So instead of rewriting whole test in op-test-framework to enjoy its features.
 
 ## How to use it:
 
-We can use it two ways:
+__We can use it two ways:__
 * run a single command in host using option (--host-cmd)
 * run multiple commands by supplying a file as input where each line is considered as a command and it detects `reboot` as a special line and takes care of host power cycle.(--host-cmd-file)
 
-Sample configuration file
+__Sample configuration file:__
 ```
 $cat host_tests.conf
 [op-test]
@@ -45,13 +44,15 @@ host_cmd_file=./tests.conf
 machine_state=OS <
 ```
 
-Explanation to config file
+__Explanation to above op-test config file:__
 ```
-host_cmd_timeout - timeout for each command in the file(just given maximum)
-host_cmd_file - file that is relative to op-test-framework base directory
+host and bmc credentials which is common for most of the tests and
+host_cmd_timeout - timeout for each command in the file(just given maximum timeout)
+host_cmd_file - file path, relative to op-test-framework base directory
 ```
 
-An example host_cmd_file, to compile upstream guest kernel, boot and run a KVM guest vcpuhotplug test.
+__An example host_cmd_file:__
+* compiles upstream guest kernel, boots and runs a KVM guest vcpuhotplug test.
 ```
 $cat tests.conf
 [ -d /home/kvmci/ ] || mkdir -p /home/kvmci
@@ -66,9 +67,9 @@ avocado run libvirt_vcpu_plug_unplug.positive_test.vcpu_set.guest.vm_operate.no_
 
 ## Let's run:
 ```
-git clone https://github.com/open-power/op-test-framework
-cd op-test-framework
-./op-test --run testcases.RunHostTest.RunHostTest -c ./host_tests.conf
+$git clone https://github.com/open-power/op-test-framework
+$cd op-test-framework
+$./op-test --run testcases.RunHostTest.RunHostTest -c ./host_tests.conf
 
 ...
 ...
@@ -96,6 +97,7 @@ Generating XML reports...
 ```
 
 References:
+
 [Guest kernel config](http://patchwork.ozlabs.org/patch/994647/)
 
 [Avocado KVM Tests](https://sathnaga.github.io/2018/05/17/testing-kvm-through-libvirt-environment.html)
