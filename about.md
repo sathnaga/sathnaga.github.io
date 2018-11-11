@@ -7,4 +7,4 @@ permalink: /about/
 
 Working as Linux, KVM Test Engineer in Linux Technology Center at IBM India.
 
-Known for KVM Test [Automation](https://github.com/sathnaga), Jenkins, and Enable CI to Agile S{D,T}LC.
+Open-Source contributor, do [Automate](https://github.com/sathnaga) Linux, KVM Tests and Enable CI to Agile S{D,T}LC.
