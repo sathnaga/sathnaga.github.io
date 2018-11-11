@@ -1,9 +1,10 @@
 ---
 layout: page
-title: [Satheesh Rajendran](https://in.linkedin.com/in/sathnaga86)
+title: Satheesh Rajendran
 permalink: /about/
 ---
 
+# [Satheesh Rajendran](https://in.linkedin.com/in/sathnaga86)
 
 Working as Linux, KVM Test Engineer in Linux Technology Center at IBM India.
 
