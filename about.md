@@ -1,8 +1,10 @@
 ---
 layout: page
-title: About me
+title: [Satheesh Rajendran](https://in.linkedin.com/in/sathnaga86)
 permalink: /about/
 ---
 
-I am Satheesh Rajendran working as Linux, KVM Test Engineer in Linux Technology Center at IBM India.
-I am known for kvm test automation and enable CI to agile S{D,T}LC
+
+Working as Linux, KVM Test Engineer in Linux Technology Center at IBM India.
+
+Known for KVM Test [Automation](https://github.com/sathnaga), Jenkins, and Enable CI to Agile S{D,T}LC.
