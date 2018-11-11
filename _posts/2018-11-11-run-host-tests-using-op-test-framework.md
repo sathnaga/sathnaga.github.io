@@ -9,10 +9,10 @@
 
 ## Why to run other framework tests through op-test-framework:
 op-test-framework has it own benefits like
-_Enable console support for IBM Power boxes_
-_Automatic Runtime failure detection like host crash_
-_Power cycle support_
-_pre-written libraries for various IPMI commands_
+1. _Enable console support for IBM Power boxes_
+2. _Automatic Runtime failure detection like host crash_
+3. _Power cycle support_
+4. _pre-written libraries for various IPMI commands_
 
 But we might already have testcases reside in other frameworks,like [Avocado](https://sathnaga.github.io/2018/05/17/testing-kvm-on-power-using-avocado-test.html).
 and shortcomings of those framework would be, environment will get lost,
@@ -24,15 +24,12 @@ So instead of rewriting whole test in op-test-framework to enjoy its features.
 ## How to use it:
 
 We can use it two ways:
-    1. run a single command in host using option (--host-cmd)
-    2. run multiple commands by supplying a file as
-     input where each line is considered as a command and
-     it detects `reboot` as a special line and takes care
-     of host power cycle.(--host-cmd-file)
+* run a single command in host using option (--host-cmd)
+* run multiple commands by supplying a file as input where each line is considered as a command and it detects `reboot` as a special line and takes care of host power cycle.(--host-cmd-file)
 
 Sample configuration file
-
->$cat host_tests.conf
+```
+$cat host_tests.conf
 [op-test]
 bmc_type=BMC
 bmc_ip=x.x.x.x
@@ -46,14 +43,17 @@ host_password=passw0rd
 host_cmd_timeout=36000
 host_cmd_file=./tests.conf
 machine_state=OS <
-
 ```
+
 Explanation to config file
+```
 host_cmd_timeout - timeout for each command in the file(just given maximum)
 host_cmd_file - file that is relative to op-test-framework base directory
 ```
+
 An example host_cmd_file, to compile upstream guest kernel, boot and run a KVM guest vcpuhotplug test.
->$cat tests.conf
+```
+$cat tests.conf
 [ -d /home/kvmci/ ] || mkdir -p /home/kvmci
 echo "KVMCI: Building Upstream guest kernel..."
 [ -d /home/kvmci/linux ] || (cd /home/kvmci && git clone --depth 1 https://git.kernel.org/pub/scm/linux/kernel/git/powerpc/linux.git -b merge)
@@ -62,14 +62,14 @@ make ppc64le_guest_config
 make olddefconfig
 make -j 240
 avocado run libvirt_vcpu_plug_unplug.positive_test.vcpu_set.guest.vm_operate.no_operation --vt-type libvirt --vt-extra-params create_vm_libvirt=yes kill_vm_libvirt=yes env_cleanup=yes mem=20480 smp=2 take_regular_screendumps=no backup_image_before_testing=no libvirt_controller=virtio-scsi scsi_hba=virtio-scsi-pci drive_format=scsi-hd use_os_variant=no restore_image_after_testing=no vga=none display=nographic kernel=/home/kvmci/linux/vmlinux kernel_args='root=/dev/sda2 rw console=tty0 console=ttyS0,115200 init=/sbin/init initcall_debug selinux=0' --vt-guest-os JeOS.27.ppc64le --job-results-dir /home/kvmci/
-<
+```
 
 ## Let's run:
-> git clone https://github.com/open-power/op-test-framework
+```
+git clone https://github.com/open-power/op-test-framework
 cd op-test-framework
 ./op-test --run testcases.RunHostTest.RunHostTest -c ./host_tests.conf
 
-```
 ...
 ...
 
@@ -95,8 +95,9 @@ OK
 Generating XML reports...
 ```
 
-Refer:
+References:
 [Guest kernel config](http://patchwork.ozlabs.org/patch/994647/)
+
 [Avocado KVM Tests](https://sathnaga.github.io/2018/05/17/testing-kvm-through-libvirt-environment.html)
 
 Hope this helps you :-), let's break the boxes with tests...
