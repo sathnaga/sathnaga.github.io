@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Satheesh Rajendran
+title: About me
 permalink: /about/
 ---
 

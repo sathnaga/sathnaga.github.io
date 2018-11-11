@@ -1,2 +1,3 @@
 # sathnaga.github.io
-Blog on Software Testing
+Blog that would concentrate on software testing
+techniques and tools for linux, KVM areas and DevOps.
