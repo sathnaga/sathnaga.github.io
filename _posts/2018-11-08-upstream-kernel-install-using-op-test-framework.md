@@ -3,12 +3,11 @@
 ## Introduction to op-test-framework:
 [op-test-framework](https://github.com/open-power/op-test-framework) is a python unittest based test suite for validating IBM OpenPower boxes, which comprises many tests including booting host with multiple configurations etc.
 
-## My Patch to enable the test:
-[https://github.com/open-power/op-test-framework/pull/293 ](https://github.com/open-power/op-test-framework/pull/293) \*yet to be merged
+## Test enables the support:
+[InstallUpstreamKernel.py](https://github.com/open-power/op-test-framework/blob/master/testcases/InstallUpstreamKernel.py)
 
-## What does this patch do:
+## What does this test do:
 This test takes input of upstream(any) kernel git repository, branch and optionally a patch to be applied on top of the given git repository and it builds, installs and boot that kernel into given IBM OpenPower box and makes it ready for further tests on it.
-
 
 ## How to use it:
 Lets see how to build, install and boot upstream kernel on IBM Power Host.
@@ -17,14 +16,13 @@ Lets see how to build, install and boot upstream kernel on IBM Power Host.
 
 ```
 $git clone https://github.com/open-power/op-test-framework
-
 $cd op-test-framework
 
 * for now the above mentioned patch to be applied
 $wget https://patch-diff.githubusercontent.com/raw/open-power/op-test-framework/pull/293.patch;git am 293.patch
 ```
 
-2. Create a machine.conf to match the host(SUT) that you want to install upstream kernel like below 
+2. Create a machine.conf to match the host(SUT) that you want to install upstream kernel like below
 
 ```
 [op-test]
@@ -46,16 +44,15 @@ git_home=/home/kvmci
 machine_state=OS
 ```
 
-```
-Explanation of config file
-- git_repo - upstream kernel repository to be used
-- git_branch - brach of upstream kernel repository to be used
-- git_repoconfigpath(optional) - kernel config can be supplied as url or local path, by default ppc64le_defconfig will be used
-- git_patch(optional) - any incremental patch to be applied on top of above kernel repository
-- git_home(optional) - base path for kernel repository clone, by default /home/ci will be used
-```
+Explanation of config file:
+* git_repo - Upstream kernel repository to be used
+* git_branch - Branch of upstream kernel repository to be used
+* git_repoconfigpath(optional) - Kernel config can be supplied as url or local path, by default ppc64le_defconfig will be used
+* git_patch(optional) - Any incremental patch to be applied on top of above kernel repository
+* git_home(optional) - Base path for kernel repository clone in SUT, by default /home/ci will be used
 
-3. Running Upstream Kernel Install test.... 
+
+3. Running Upstream Kernel Install test...
 
 ```
 $./op-test -c machine.conf --run testcases.InstallUpstreamKernel.InstallUpstreamKernel
@@ -80,4 +77,5 @@ OK
 ```
 
 Now your server has the upstream kernel installed and ready to test :-) ...
+
 Hope this helps, Thanks for reading...
