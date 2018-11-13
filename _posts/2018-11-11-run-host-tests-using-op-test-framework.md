@@ -41,7 +41,7 @@ host_user=root
 host_password=passw0rd
 host_cmd_timeout=36000
 host_cmd_file=./tests.conf
-machine_state=OS <
+machine_state=OS
 ```
 
 __Explanation to above op-test config file:__
@@ -85,7 +85,6 @@ JOB HTML   : /home/kvmci/job-2018-11-09T00.19-b291eb3/results.html
 [console-expect]#echo $?
 echo $?
 0
-[console-expect]#Warning: Permanently added '9.40.192.88' (ECDSA) to the list of known hosts.
 OK (113.264s)
 
 ----------------------------------------------------------------------
