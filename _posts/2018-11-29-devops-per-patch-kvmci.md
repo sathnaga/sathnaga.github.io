@@ -33,7 +33,7 @@ the given jenkins job with the repository and branch details.
 
 * [_Install Avocado test framework_](https://sathnaga86.com/2018/05/17/testing-kvm-through-libvirt-environment.html)
 
-* _Build upstream qemu_ - uses powerpc [maintainer's branch](https://github.com/dgibson/qemu.git)
+* _Build upstream qemu_
 
 * _Build upstream libvirt_
 
