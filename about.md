@@ -4,7 +4,7 @@ title: Satheesh Rajendran
 permalink: /about/
 ---
 
-![](https://avatars0.githubusercontent.com/u/1841809?s=400&v=4)
+![](https://avatars0.githubusercontent.com/u/1841809?s=200&v=4)
 
 Working as Linux, KVM Test Engineer in Linux Technology Center at IBM India.
 
