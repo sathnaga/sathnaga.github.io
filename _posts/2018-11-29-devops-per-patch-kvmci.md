@@ -38,12 +38,13 @@ the given jenkins job with the repository and branch details.
 * _Build upstream libvirt_
 
 * [_Run KVM Tests with Upstream Host Kernel, guest kernel, qemu and libvirt_](https://sathnaga86.com/2018/11/11/run-host-tests-using-op-test-framework.html)
+
 ![](https://github.com/sathnaga/sathnaga.github.io/raw/master/resources/kvmcipipeline.png)
 
 
 3. Notify Slack on completion
 
-    ![](https://github.com/sathnaga/sathnaga.github.io/raw/master/resources/kvmcislacknotification.png)
+![](https://github.com/sathnaga/sathnaga.github.io/raw/master/resources/kvmcislacknotification.png)
 
 #### Results can be viewed in Jenkins
 
