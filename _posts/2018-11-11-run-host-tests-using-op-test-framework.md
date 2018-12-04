@@ -23,8 +23,8 @@ So instead of rewriting whole test in op-test-framework to enjoy its features.
 ## How to use it:
 
 __We can use it two ways:__
-* run a single command in host using option (--host-cmd)
-* run multiple commands by supplying a file as input where each line is considered as a command and it detects `reboot` as a special line and takes care of host power cycle.(--host-cmd-file)
+* run a single command in host(SUT) using option (--host-cmd)
+* run multiple commands in host(SUT) by supplying a file as input where each line is considered as a command and it detects `reboot` as a special line and takes care of host power cycle.(--host-cmd-file)
 
 __Sample configuration file:__
 ```
@@ -41,14 +41,16 @@ host_user=root
 host_password=passw0rd
 host_cmd_timeout=36000
 host_cmd_file=./tests.conf
+host_cmd_resultpath=/home/kvmci/latest
 machine_state=OS
 ```
 
 __Explanation to above op-test config file:__
 ```
 host and bmc credentials which is common for most of the tests and
-host_cmd_timeout - timeout for each command in the file(just given maximum timeout)
-host_cmd_file - file path, relative to op-test-framework base directory
+host_cmd_timeout - timeout for each command in the file(just given maximum timeout).
+host_cmd_file - file path, relative to op-test-framework base directory.
+host_cmd_resultpath - folder path inside the host(SUT) to copy back the results.
 ```
 
 __An example host_cmd_file:__
@@ -101,4 +103,4 @@ References:
 
 [Avocado KVM Tests](https://sathnaga.github.io/2018/05/17/testing-kvm-through-libvirt-environment.html)
 
-Hope this helps you :-), let's break the boxes with tests...
+_Hope this helps you :-), let's break the boxes with tests..._
