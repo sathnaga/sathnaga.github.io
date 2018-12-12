@@ -61,8 +61,7 @@ $cat tests.conf
 echo "KVMCI: Building Upstream guest kernel..."
 [ -d /home/kvmci/linux ] || (cd /home/kvmci && git clone --depth 1 https://git.kernel.org/pub/scm/linux/kernel/git/powerpc/linux.git -b merge)
 cd /home/kvmci/linux
-make ppc64le_guest_config
-make olddefconfig
+make ppc64le_guest_defconfig
 make -j 240
 avocado run libvirt_vcpu_plug_unplug.positive_test.vcpu_set.guest.vm_operate.no_operation --vt-type libvirt --vt-extra-params create_vm_libvirt=yes kill_vm_libvirt=yes env_cleanup=yes mem=20480 smp=2 take_regular_screendumps=no backup_image_before_testing=no libvirt_controller=virtio-scsi scsi_hba=virtio-scsi-pci drive_format=scsi-hd use_os_variant=no restore_image_after_testing=no vga=none display=nographic kernel=/home/kvmci/linux/vmlinux kernel_args='root=/dev/sda2 rw console=tty0 console=ttyS0,115200 init=/sbin/init initcall_debug selinux=0' --vt-guest-os JeOS.27.ppc64le --job-results-dir /home/kvmci/
 ```
