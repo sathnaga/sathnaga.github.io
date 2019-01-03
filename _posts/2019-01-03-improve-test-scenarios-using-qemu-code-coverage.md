@@ -16,7 +16,7 @@ Linux box installed with Avocado framework, you can do referring my previous blo
 >Hardware: IBM Power8 Box, Operating system: Fedora29 distribution with
 latest host kernel(4.20) on it.
 
-### How to prepare qemu source for Code coverage measurement
+### How to prepare qemu source for Code coverage measurement:
 
 * #### _Let's run below qemu build test to compile qemu binary with code coverage instrumentation(gcov) enabled_
 
@@ -25,12 +25,12 @@ latest host kernel(4.20) on it.
     # avocado run --vt-config qemu_build.cfg --vt-extra-params git_repo_qemu_configure_options="--target-list=ppc64-softmmu --enable-debug --enable-gcov"
     ```
 
->Now we have qemu source code/binary instrumented with gcov, lets run a kvm test and measure code covered by the test.
+>_Now we have qemu source code/binary instrumented with gcov, lets run a kvm test and measure code covered by the test._
 
->We need the following patch to be merged in avocado-vt to avail the support,
-[Avocado-vt patch to enable qemu code coverage support](https://patch-diff.githubusercontent.com/raw/avocado-framework/avocado-vt/pull/1873.patch)
+>_We need the following patch to be merged in avocado-vt to avail the support,
+[Avocado-vt patch to enable qemu code coverage support](https://patch-diff.githubusercontent.com/raw/avocado-framework/avocado-vt/pull/1873.patch)_
 
->For now you can use my [kvmci](https://github.com/sathnaga/avocado-vt/tree/kvmci) branch for avocado-vt Or directly use above patch in your avocado-vt repository using `git am <downloaded patch>`
+>_For now you can use my [kvmci](https://github.com/sathnaga/avocado-vt/tree/kvmci) branch for avocado-vt Or directly use above patch in your avocado-vt repository using `git am <downloaded patch>`_
 
 ### How to run kvm tests to get code coverage:
 
