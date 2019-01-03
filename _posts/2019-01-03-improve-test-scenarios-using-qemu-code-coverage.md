@@ -12,9 +12,8 @@ and coverage report can be generated using tools like [gcovr](https://gcovr.com/
 Linux box installed with Avocado framework, you can do referring my previous blogs on how to
 [Install avocado](https://sathnaga86.com/2018/05/17/testing-kvm-on-power-using-avocado-test.html) and [Running libvirts test using avocado](https://sathnaga86.com/2018/05/17/testing-kvm-through-libvirt-environment.html)
 
-Hardware Environment used: IBM Power8 Box.
-
-Operating system: Fedora29 distribution with
+* Environment Used:
+>Hardware: IBM Power8 Box, Operating system: Fedora29 distribution with
 latest host kernel(4.20) on it.
 
 ### How to prepare qemu source for Code coverage measurement
