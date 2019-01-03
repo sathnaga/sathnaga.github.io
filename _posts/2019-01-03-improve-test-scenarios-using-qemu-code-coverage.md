@@ -1,10 +1,12 @@
-# Measuring qemu Code Coverage using avocado-vt framework and use it to improve test scenarios
+_Blog on how to measuring qemu Code Coverage using avocado-vt framework and use it to improve test scenarios_
 
-## Code Coverage and measurement:
+## What is Code Coverage measurement:
 Code coverage is measurement of how many lines of source code blocks/branches
 are executed during automated test runs and it can be done by instrumenting
 the source prior using certain tools like [gcov](https://en.wikipedia.org/wiki/Gcov)
 and coverage report can be generated using tools like [gcovr](https://gcovr.com/)
+
+## How to measure qemu code coverage and view reports for test improvements:
 
 ### Pre-requisite:
 Linux box installed with Avocado framework, you can do referring my previous blogs on how to
@@ -15,9 +17,7 @@ Hardware Environment used: IBM Power8 Box.
 Operating system: Fedora29 distribution with
 latest host kernel(4.20) on it.
 
-### Prepare qemu source for Code coverage measurement
-Firstly we have to build the qemu binary with gcov instrumenting for code Coverage
-measurement, we can do that easily using avocado-vt framework by following below steps.
+### How to prepare qemu source for Code coverage measurement
 
 * #### _Let's run below qemu build test to compile qemu binary with code coverage instrumentation(gcov) enabled_
 
@@ -26,14 +26,14 @@ measurement, we can do that easily using avocado-vt framework by following below
     # avocado run --vt-config qemu_build.cfg --vt-extra-params git_repo_qemu_configure_options="--target-list=ppc64-softmmu --enable-debug --enable-gcov"
     ```
 
-### Setup and how to run tests to get code coverage:
-
 >Now we have qemu source code/binary instrumented with gcov, lets run a kvm test and measure code covered by the test.
 
 >We need the following patch to be merged in avocado-vt to avail the support,
 [Avocado-vt patch to enable qemu code coverage support](https://patch-diff.githubusercontent.com/raw/avocado-framework/avocado-vt/pull/1873.patch)
 
 >For now you can use my [kvmci](https://github.com/sathnaga/avocado-vt/tree/kvmci) branch for avocado-vt Or directly use above patch in your avocado-vt repository using `git am <downloaded patch>`
+
+### How to run kvm tests to get code coverage:
 
 * #### _Let's run below vcpu hotplug kvm test to measure code coverage_
 
@@ -67,7 +67,7 @@ Above `gcov_qemu.tar.gz` contains detailed code coverage reports and can be view
 
 ![](https://github.com/sathnaga/sathnaga.github.io/raw/master/resources/gcov_report.png)
 
-### Conclusion:
+## Conclusion:
 
 Now we should be able to check what part of code gets exercised while running our individual [blackbox](https://en.wikipedia.org/wiki/Black-box_testing) [avocado tests](https://sathnaga86.com/2018/05/17/testing-kvm-on-power-using-avocado-test.html), using the same we can improve test scenarios to address missing part of code.
 
