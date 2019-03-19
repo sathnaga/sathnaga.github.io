@@ -1,15 +1,15 @@
 # This blog explains how avocado and op-test helps us to setup and run syzkaller on Power Platform
 
-## **What is syzkaller:**
+## What is syzkaller:
 [syzkaller](https://github.com/google/syzkaller) is an unsupervised, coverage-guided kernel fuzzer
 
-## **Avocado test enables support:**
+## Avocado test enables support:
 
-Testcase: [syzkaller.power](https://github.com/autotest/tp-qemu/pull/1691) *
+**Testcase:** [syzkaller.power](https://github.com/autotest/tp-qemu/pull/1691) *
 
     *  Pull request yet to be merged, till it gets merged this patch needs to applied manually before running below avocado command line.
 
-### *What the testcase do:*
+**_What the testcase do:_**
 
 1. Install/Setup syzkaller in host.
 2. Setup Guest passwordless ssh from host.
@@ -18,7 +18,7 @@ Testcase: [syzkaller.power](https://github.com/autotest/tp-qemu/pull/1691) *
 5. Start sykaller with above config and run for specified time(test_timeout).
 6. Fails out the test in case of host issues.
 
-### *syzkaller specific testcase config parameters:*
+**_syzkaller specific testcase config parameters:_**
 
 Below syzkaller specific test parameters with default values as given here,
 which can be modified in avocado command line to match as per our needs using
@@ -37,7 +37,7 @@ syz_count = 1
 syz_procs = 4
 ```
 
-## **How to use:**
+## How to use:
 
 **_ENV Used for this blog:_**
 
@@ -56,7 +56,7 @@ RESULTS    : PASS 1 | ERROR 0 | FAIL 0 | SKIP 0 | WARN 0 | INTERRUPT 0 | CANCEL 
 JOB TIME   : 1837.14 s
 ```
 
-### **_Running syzkaller testcase through op-test:_**
+### Running syzkaller testcase through op-test:
 
 There are lot of chances we might hit host crash itself, so let's run above Avocado test
 using [op-test-framework](https://sathnaga86.com/2018/11/11/run-host-tests-using-op-test-framework.html),
