@@ -22,7 +22,7 @@ Linux Kernel, Python, Linux KVM, Testing, Git, Debugging.
 
 ### EXPERIENCE
 #### IBM [Advisory Software Engineer( Automation Test Specialist)] - `Sep2011 - Now`
-* Enable CI to Agile S{D,T}LC and Automate Tests.
+*       Enable CI to Agile S{D,T}LC and Automate Tests.
 
 *	Designed & developed in house end to end automation framework for continuous testing using Jenkins and python. Contribution was appreciated and acknowledged with Agile Excellence Award.
 
@@ -58,7 +58,7 @@ testrig at offshore.
 
 ### EDUCATION
 #### Bachelor of Engineering (B.E.) in Electronics and Communications -`2003 - 2007`
-[A.C College of Engineering and Technology, Karaikudi](https://accetedu.in/)
+[A.C College of Engineering and Technology, Karaikudi](https://en.wikipedia.org/wiki/Alagappa_Chettiar_College_of_Engineering_and_Technology)
 
 ### AWARDS
 [Click here](https://sathnaga86.com/awards/)
