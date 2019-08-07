@@ -6,7 +6,7 @@ permalink: /bio/
 
 # Satheesh Rajendran
 
-sathnaga86@gmail.com  **||**  *Website:* [https://sathnaga86.com](https://sathnaga86.com) **||** +919739723527 **||** [Linkedin](https://in.linkedin.com/in/sathnaga86)
+**  [sathnaga86@gmail.com](mailto:sathnaga86@gmail.com)  **||**  _Website:_ [https://sathnaga86.com](https://sathnaga86.com) **||** +919739723527 **||** [Linkedin](https://in.linkedin.com/in/sathnaga86) **
 
 ![](https://avatars0.githubusercontent.com/u/1841809?s=70&v=3)
 
