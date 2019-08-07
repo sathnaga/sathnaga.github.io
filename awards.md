@@ -4,7 +4,7 @@ title: awards
 permalink: /awards/
 ---
 
-# *__Awards Timeline__*
+# *__Timeline__*
 
 ## *2019*
 ![](https://github.com/sathnaga/sathnaga.github.io/raw/master/resources/awards/isdl_mar_19.jpg)
