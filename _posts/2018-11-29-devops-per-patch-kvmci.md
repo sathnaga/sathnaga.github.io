@@ -27,7 +27,7 @@ the given jenkins job with the repository and branch details.
 
     * [_Build and install upstream kernel on OpenPOWER box_](https://sathnaga86.com/2018/11/08/upstream-kernel-install-using-op-test-framework.html) - built with `ppc64le_defconfig`
 
-    * _Build upstream guest kernel_ - built with `ppc64le_guest_defconfig`
+    * _Build upstream guest kernel_ - built with [`ppc64le_guest_defconfig`](http://patchwork.ozlabs.org/patch/994647/)
 
     * [_Install Avocado test framework_](https://sathnaga86.com/2018/05/17/testing-kvm-through-libvirt-environment.html)
 
