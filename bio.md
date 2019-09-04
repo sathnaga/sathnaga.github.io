@@ -37,17 +37,17 @@ Linux Kernel, Python, Linux KVM, Testing, Git, Debugging.
 *	Developed an end to end automated upstream Virtualization Testing Framework.
 
 *	Open-Source Contributions:
-    1. [tp-libvirt commits](https://github.com/autotest/tp-libvirt/commits?author=sathnaga&since=2011-09)
-    2. [tp-qemu commits](https://github.com/autotest/tp-qemu/commits?author=sathnaga&since=2011-09)
-    3. [autotest commits](https://github.com/autotest/autotest/commits?author=sathnaga&since=2011-09)
-    4. [avocado commits](https://github.com/avocado-framework/avocado/commits?author=sathnaga&since=2016-09)
-    5. [avocado-vt commits](https://github.com/avocado-framework/avocado-vt/commits?author=sathnaga&since=2016-09)
-    6. [Openpower tests commits](https://github.com/open-power-host-os/tests/commits?author=sathnaga&since=2016-05)
-    7. [Qemu Commits](https://github.com/qemu/qemu/search?q=sathnaga&type=Commits)
-    8. [Linux Kernel Commits](https://github.com/torvalds/linux/search?q=sathnaga&type=Commits)
+    1. [avocado-vt commits](https://github.com/avocado-framework/avocado-vt/search?q=sathnaga&type=Commits)
+    2. [tp-libvirt commits](https://github.com/autotest/tp-libvirt/search?q=sathnaga&type=Commits)
+    3. [tp-qemu commits](https://github.com/autotest/tp-qemu/search?q=sathnaga&type=Commits)
+    4. [avocado commits](https://github.com/avocado-framework/avocado/search?q=sathnaga&type=Commits)
+    5. [autotest commits](https://github.com/autotest/autotest/search?q=sathnaga&type=Commits)
+    6. [Openpower tests commits](https://github.com/open-power-host-os/tests/search?q=sathnaga&type=Commits)
+    7. [optest commits](https://github.com/open-power/op-test/search?q=sathnaga&type=Commits)
+    8. [Qemu Commits](https://github.com/qemu/qemu/search?q=sathnaga&type=Commits)
+    9. [Linux Kernel Commits](https://github.com/torvalds/linux/search?q=sathnaga&type=Commits)
 
-
-* Authored Testing [Blogs](https://sathnaga86.com/)
+* 	Authored Testing [Blogs](https://sathnaga86.com/)
 
 #### WIPRO [Software Engineer(Automation Test Engineer)] - `Dec2007 - Aug2011`
 
