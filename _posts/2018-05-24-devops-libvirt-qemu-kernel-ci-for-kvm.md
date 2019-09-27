@@ -7,11 +7,11 @@ _Refer my previous blogs for introductions of avocado test framework._
 
  **_Below are Commits which enabled support:_**
 
-* 1581 Added support Libvirt package build test.
-* 1582 Add qemu binary entry for powerpc.
-* 1584 Minor fixes for custom boot params.
-* 1602 Add libvirt build test config.
-* 09d46e3 Added virt-install kernel and initrd params support.
+* [74fbe0cf](https://github.com/avocado-framework/avocado-vt/commit/74fbe0cf2e832afafdff728333a838be897466fd) Added support Libvirt package build test.
+* [a95d2972](https://github.com/avocado-framework/avocado-vt/commit/a95d2972abda166b1f27c246248b384787ff5963) Add qemu binary entry for powerpc.
+* [8aaceb14](https://github.com/avocado-framework/avocado-vt/commit/8aaceb14a538d519a4036591d00a9433163ff9cd) Minor fixes for custom boot params.
+* [09d46e3](https://github.com/avocado-framework/avocado-vt/commit/09d46e331ae20b96dc882330fbb82ef6536af98e) Added virt-install kernel and initrd params support.
+* [ab328a91](https://github.com/autotest/tp-libvirt/commit/ab328a91d19a14e22a0073d1e4442dbdd89168e8) Add libvirt build test config.
 
 
 ## Steps to setup CI on KVM IBM Power Host:
