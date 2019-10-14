@@ -5,9 +5,7 @@
 
 ## Avocado test enables support:
 
-**Testcase:** [syzkaller.power](https://github.com/autotest/tp-qemu/pull/1691) *
-
-    *  Pull request yet to be merged, till it gets merged this patch needs to applied manually before running below avocado command line.
+**Testcase:** [syzkaller.power](https://github.com/autotest/tp-qemu/commit/db186f3b38717bf299e48c0cd6110d9396aed375)
 
 **_What the testcase do:_**
 
