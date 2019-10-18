@@ -80,3 +80,11 @@ Individual files line and branch coverage:
 Now we should be able to check what part of code gets exercised while running our individual [blackbox](https://en.wikipedia.org/wiki/Black-box_testing) [avocado tests](https://sathnaga86.com/2018/05/17/testing-kvm-on-power-using-avocado-test.html), using the same we can improve test scenarios to address missing part of code.
 
 _Thanks for reading, hope this helps you in someways...._
+
+<script src="https://utteranc.es/client.js"
+        repo="sathnaga/sathnaga.github.io"
+        issue-term="url"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>

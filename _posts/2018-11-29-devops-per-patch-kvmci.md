@@ -51,3 +51,11 @@ the given jenkins job with the repository and branch details.
 
 
 _Thanks for reading, Hope this helps you in someways..._
+
+<script src="https://utteranc.es/client.js"
+        repo="sathnaga/sathnaga.github.io"
+        issue-term="url"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>

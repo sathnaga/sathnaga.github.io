@@ -129,3 +129,11 @@ JOB HTML   : /root/avocado/job-results/job-2018-05-24T06.28-3c21388/results.html
 ```
 
 _Hope this blog help you in someway, Thanks for reading..._
+
+<script src="https://utteranc.es/client.js"
+        repo="sathnaga/sathnaga.github.io"
+        issue-term="url"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>

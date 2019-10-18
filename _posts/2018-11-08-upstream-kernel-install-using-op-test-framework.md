@@ -85,3 +85,11 @@ OK
 Now your server has the upstream kernel installed and ready to test :-) ...
 
 Hope this helps, Thanks for reading...
+
+<script src="https://utteranc.es/client.js"
+        repo="sathnaga/sathnaga.github.io"
+        issue-term="url"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>

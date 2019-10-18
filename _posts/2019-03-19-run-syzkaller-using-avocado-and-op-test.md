@@ -116,3 +116,11 @@ OK
 ```
 
 _Hope this blog help you in someway, Thanks for reading..._
+
+<script src="https://utteranc.es/client.js"
+        repo="sathnaga/sathnaga.github.io"
+        issue-term="url"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>

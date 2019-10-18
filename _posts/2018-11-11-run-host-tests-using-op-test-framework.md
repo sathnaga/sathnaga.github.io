@@ -103,3 +103,11 @@ References:
 [Avocado KVM Tests](https://sathnaga.github.io/2018/05/17/testing-kvm-through-libvirt-environment.html)
 
 _Hope this helps you :-), let's break the boxes with tests..._
+
+<script src="https://utteranc.es/client.js"
+        repo="sathnaga/sathnaga.github.io"
+        issue-term="url"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
