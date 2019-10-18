@@ -118,3 +118,11 @@ If you are interested in KVM Testing, there are much more possibilities you can 
 with [Avocado-VT](https://github.com/avocado-framework/avocado-vt) and reach us through [mailing list](https://www.redhat.com/mailman/listinfo/avocado-devel) for any suggestions or queries.
 
  Hope this blog helps you in someways :-)
+
+<script src="https://utteranc.es/client.js"
+        repo="sathnaga/sathnaga.github.io"
+        issue-term="url"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
