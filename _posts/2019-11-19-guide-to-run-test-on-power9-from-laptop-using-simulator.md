@@ -49,7 +49,7 @@ Install packages needed for cross compilation
 
 5. Create op-test config to run [OpTestMamboBuildRoot](https://github.com/open-power/op-test/pull/545/commits/bbc9ffc90e12557db0a4a08433d4831e422bd57c) test, same test can modified to run different commands inside power9 host systemsim.
 ```
-    $cat mambo.cfg
+    $cat mambo_p9.cfg
     [op-test]
     bmc_type=mambo
     mambo_binary=/opt/ibm/systemsim-p9/run/p9/power9;5dc2cbf4
