@@ -1,9 +1,9 @@
-# Guide to run commands/tests on a power9 using systemsim(mambo) from your laptop using op-test and buildroot
+# Guide to run commands/tests on a IBM Power9 using systemsim(mambo) from your Laptop using op-test and buildroot
 
 ## Env Used:
 
 * Intel(R) Core(TM) i5-5300U CPU @ 2.30GHz
-*   Fedora 31(5.3.7-301.fc31.x86_64)
+* Fedora 31(5.3.7-301.fc31.x86_64)
 
 ## Pre-requisite:
 Install packages needed for cross compilation
@@ -44,25 +44,26 @@ Install packages needed for cross compilation
     * Find root filesystem in output/images(`rootfs.cpio`).
 
 
-4. Install systemsim(mambo) [rpm](ftp://public.dhe.ibm.com/software/server/powerfuncsim/p9/packages/) from `ftp://public.dhe.ibm.com/software/server/powerfuncsim/p9/packages/` for power9 and check for systemsim(mambo) binary for power9 under `/opt/ibm/systemsim-p9/run/p9/`
+4. Install systemsim(mambo) [rpm](ftp://public.dhe.ibm.com/software/server/powerfuncsim/p9/packages) for power9 and check for systemsim(mambo) binary for power9 under `/opt/ibm/systemsim-p9/run/p9/`.
 
-5. Create op-test config to run [OpTestMamboBuildRoot](https://github.com/open-power/op-test/pull/545/commits/5a4bb5bc22b8c4c8acdb400eb57dc8199010dc98) test, same test can modified to run different commands inside power9 host systemsim.
-```
-cat mambo.cfg
-[op-test]
-bmc_type=mambo
-mambo_binary=/opt/ibm/systemsim-p9/run/p9/power9;5dc2cbf4
-flash_skiboot=/home/satheesh/github/skiboot/skiboot.lid
-flash_kernel=/home/satheesh/github/linux/vmlinux
-flash_initramfs=/home/satheesh/github/buildroot/output/rootfs.cpio
-host_user=root
-host_password=
-```
 
-6. Run [OpTestMamboBuildRoot](https://github.com/open-power/op-test/pull/545/commits/5a4bb5bc22b8c4c8acdb400eb57dc8199010dc98) test, which executes `cat /proc/interrupts` and `cat /proc/cpuinfo` inside a power9 host systemsim(mambo) env as shown below.
+5. Create op-test config to run [OpTestMamboBuildRoot](https://github.com/open-power/op-test/pull/545/commits/bbc9ffc90e12557db0a4a08433d4831e422bd57c) test, same test can modified to run different commands inside power9 host systemsim.
+```
+    $cat mambo.cfg
+    [op-test]
+    bmc_type=mambo
+    mambo_binary=/opt/ibm/systemsim-p9/run/p9/power9;5dc2cbf4
+    flash_skiboot=/home/satheesh/github/skiboot/skiboot.lid
+    flash_kernel=/home/satheesh/github/linux/vmlinux
+    flash_initramfs=/home/satheesh/github/buildroot/output/rootfs.cpio
+    host_user=root
+    host_password=
 ```
 
-    ./op-test -c mambo_p9.cfg --run testcases.OpTestMamboBuildRoot.OpTestMamboBuildRoot
+6. Run [OpTestMamboBuildRoot](https://github.com/open-power/op-test/pull/545/commits/bbc9ffc90e12557db0a4a08433d4831e422bd57c) test, which executes `cat /proc/interrupts` and `cat /proc/cpuinfo` inside a power9 host systemsim(mambo) env as shown below.
+```
+
+    $./op-test -c mambo_p9.cfg --run testcases.OpTestMamboBuildRoot.OpTestMamboBuildRoot
 
     ...
     ...
