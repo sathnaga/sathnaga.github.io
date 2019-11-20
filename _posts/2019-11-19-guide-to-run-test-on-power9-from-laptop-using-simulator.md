@@ -24,8 +24,8 @@ Install packages needed for cross compilation
 
 2. Clone linux [kernel](https://github.com/torvalds/linux), Cross compile  and get `vmlinux`.
     ```
-    ARCH=powerpc CROSS=powerpc64le-linux-gnu- make ppc64le_defconfig
-    ARCH=powerpc CROSS=powerpc64le-linux-gnu- make -j `nproc`
+    ARCH=powerpc CROSS_COMPILE=powerpc64le-linux-gnu- make ppc64le_defconfig
+    ARCH=powerpc CROSS_COMPILE=powerpc64le-linux-gnu- make -j `nproc`
     ```
 3. Clone [buildroot](https://github.com/open-power/buildroot), Compile and get rootfs image.
 
