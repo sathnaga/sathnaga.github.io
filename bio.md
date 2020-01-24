@@ -24,6 +24,8 @@ Linux Kernel, Python, Linux KVM, Testing, Git, Debugging.
 #### IBM [Advisory Software Engineer( Automation Test Specialist)] - `Sep2011 - Now`
 *       Enable CI to Agile S{D,T}LC and Automate Tests.
 
+*	Validate KVM Functionalities.
+
 *	Designed & developed in house end to end automation framework for continuous testing using Jenkins and python. Contribution was appreciated and acknowledged with Agile Excellence Award.
 
 *	Designed & developed open-source automation framework for running tests on Openpower machines [tests](https://github.com/open-power-host-os/tests).
@@ -32,7 +34,7 @@ Linux Kernel, Python, Linux KVM, Testing, Git, Debugging.
 	1. [avocado-vt](https://github.com/avocado-framework/avocado-vt/)
 	2. [tp-libvirt](https://github.com/autotest/tp-libvirt)
 	3. [tp-qemu](https://github.com/autotest/tp-libvirt)
-	4. [tests](https://github.com/open-power-host-os/tests)
+	4. [tests](https://github.com/open-power-host-os/tests).
 
 *	Developed an end to end automated upstream Virtualization Testing Framework.
 
@@ -45,9 +47,9 @@ Linux Kernel, Python, Linux KVM, Testing, Git, Debugging.
 	6. [Openpower tests commits](https://github.com/open-power-host-os/tests/search?q=sathnaga&type=Commits)
 	7. [optest commits](https://github.com/open-power/op-test/search?q=sathnaga&type=Commits)
 	8. [Qemu Commits](https://github.com/qemu/qemu/search?q=sathnaga&type=Commits)
-	9. [Linux Kernel Commits](https://github.com/torvalds/linux/search?q=sathnaga&type=Commits)
+	9. [Linux Kernel Commits](https://github.com/torvalds/linux/search?q=sathnaga&type=Commits).
 
-* 	Authored Testing [Blogs](https://sathnaga86.com/)
+* 	Authored Testing [Blogs](https://sathnaga86.com/).
 
 #### WIPRO [Software Engineer(Automation Test Engineer)] - `Dec2007 - Aug2011`
 
@@ -58,7 +60,7 @@ testrig at offshore.
 
 ### EDUCATION
 #### Bachelor of Engineering (B.E.) in Electronics and Communications -`2003 - 2007`
-[A.C College of Engineering and Technology, Karaikudi](https://en.wikipedia.org/wiki/Alagappa_Chettiar_College_of_Engineering_and_Technology)
+[A.C College of Engineering and Technology, Karaikudi](https://en.wikipedia.org/wiki/Alagappa_Chettiar_College_of_Engineering_and_Technology).
 
 ### AWARDS
-[Click here](https://sathnaga86.com/awards/)
+[Click here](https://sathnaga86.com/awards/).
