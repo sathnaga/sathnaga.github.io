@@ -36,7 +36,7 @@ Linux Kernel, Python, Linux KVM, Testing, Git, Debugging.
 	3. [tp-qemu](https://github.com/autotest/tp-libvirt)
 	4. [tests](https://github.com/open-power-host-os/tests).
 
-*	Developed an end to end automated upstream Virtualization Testing Framework.
+*	Developed an end to end automated upstream Virtualization Testing [Framework](https://sathnaga86.com/2018/11/29/devops-per-patch-kvmci.html).
 
 *	Open-Source Contributions:
 	1. [avocado-vt commits](https://github.com/avocado-framework/avocado-vt/search?q=sathnaga&type=Commits)
