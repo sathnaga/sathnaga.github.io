@@ -1,18 +1,22 @@
 # How to boot a PowerPC KVM guest from virtio-fs
 
-## Environment used
+## Environment used:
 
 * HW: [MiHawk 2U2S Power9](https://openpowerfoundation.org/?resource_lib=wistron-corp-p93d2-2p-mihawk)
 * Host OS: Fedora 31
 
-## How to:
 
-#### Create a working directory on host.
+## Step by step procedure on how to:
+
+### Create a working directory on host.
+
 * mkdir -p /home/virtio-fs
 * cd /home/virtio-fs
 > For rest of the blog this folder is referred as $PWD
 
-#### Need a Guest kernel that supports virtio-fs as bootdisk, let's build one.
+--------------
+
+### Need a Guest kernel that supports virtio-fs as bootdisk, let's build one.
 
 *Get kernel:*
 * git clone https://github.com/sathnaga/linux -b virtio-fs
@@ -33,8 +37,9 @@
 
 Now we have guest kernel ready at **$PWD/linux/vmlinux**
 
+--------------
 
-#### Need a qemu that supports virtio-fs, let's build one.
+### Need a qemu that supports virtio-fs, let's build one.
 
 *Get Qemu:*
 * git clone https://gitlab.com/virtio-fs/qemu.git
@@ -47,14 +52,19 @@ Now we have guest kernel ready at **$PWD/linux/vmlinux**
 
 Now we have qemu binary at **$PWD/qemu/ppc64-softmmu/qemu-system-ppc64**
 
-#### Need a virtiofs daemon, let's build one.
+--------------
+
+### Need a virtiofs daemon, let's build one.
+
 * cd qemu
 * make -j 8 virtiofsd
 * cd ..
 
 Now we have virtio fs daemon binary at **$PWD/qemu/virtiofsd**
 
-#### Let's build a Fedora root file system based on F32:
+------------
+
+### Let's build a Fedora root file system based on F32:
 * mkdir $PWD/virtio-fs-root
 * dnf --installroot=$PWD/virtio-fs-root --releasever=32 install system-release vim-minimal systemd passwd dnf rootfiles pciutils
 
@@ -87,18 +97,24 @@ Now we have virtio fs daemon binary at **$PWD/qemu/virtiofsd**
 * cd $PWD/virtio-fs-root/etc/systemd/system/getty.target.wants/
 * ln -s serial-getty@hvc0.service getty@hvc0.service
 * Edit getty@hvc0.service with below changes
-```
-[Unit]
-....
-ConditionPathExists=/dev/hvc0
-....
-[Install]
-WantedBy=getty.target
-DefaultInstance=hvc0
-```
+    ```
+    ...
+    [Unit]
+    ....
+    ConditionPathExists=/dev/hvc0
+    ....
+    [Install]
+    WantedBy=getty.target
+    DefaultInstance=hvc0
+    ```
 > this is needed to get the guest serial console working fine.
+
 *  cd /home/virtio-fs
-#### Let's Boot guest using qemu cmdline with virtio-fs
+
+--------------
+
+### Let's Boot PowerPC KVM guest using qemu cmdline with virtio-fs
+
 *  $PWD/qemu/virtiofsd -o vhost_user_socket=/tmp/vhostqemu -o source=$PWD/virtio-fs-root -o cache=none &
 > this command starts the virtio fs daemon in background
 
@@ -177,12 +193,12 @@ Linux localhost 5.7.0-rc5-g7aa8a99a5-dirty #5 SMP Tue May 12 07:33:17 EDT 2020 p
 ```
 
 
-> Now We have PowerPC KVM guest booted with virtio-fs as bootdisk.
+> _**Now We have PowerPC KVM guest booted with virtio-fs as bootdisk.**_
 
 
 This blog is written based on below reference documents on virtio-fs and my additional steps that are needed for PowerPC environment.
-* https://virtio-fs.gitlab.io/howto-qemu.html
-* https://virtio-fs.gitlab.io/howto-boot.html
+* [https://virtio-fs.gitlab.io/howto-qemu.html](https://virtio-fs.gitlab.io/howto-qemu.html)
+* [https://virtio-fs.gitlab.io/howto-boot.html](https://virtio-fs.gitlab.io/howto-qemu.html)
 
 Thanks for reading, Hope this blog helps you in someways :-)
 
