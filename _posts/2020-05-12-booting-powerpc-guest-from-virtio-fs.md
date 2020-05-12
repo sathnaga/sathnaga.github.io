@@ -6,9 +6,9 @@
 * Host OS: Fedora 31
 
 
-## Step by step procedure on how to:
+## Steps:
 
-### Create a working directory on host.
+### 1. Create a working directory on host.
 
 * mkdir -p /home/virtio-fs
 * cd /home/virtio-fs
@@ -16,7 +16,7 @@
 
 --------------
 
-### Need a Guest kernel that supports virtio-fs as bootdisk, let's build one.
+### 2. Need a Guest kernel that supports virtio-fs as bootdisk, let's build one.
 
 *Get kernel:*
 * git clone https://github.com/sathnaga/linux -b virtio-fs
@@ -39,7 +39,7 @@ Now we have guest kernel ready at **$PWD/linux/vmlinux**
 
 --------------
 
-### Need a qemu that supports virtio-fs, let's build one.
+### 3. Need a qemu that supports virtio-fs, let's build one.
 
 *Get Qemu:*
 * git clone https://gitlab.com/virtio-fs/qemu.git
@@ -54,7 +54,7 @@ Now we have qemu binary at **$PWD/qemu/ppc64-softmmu/qemu-system-ppc64**
 
 --------------
 
-### Need a virtiofs daemon, let's build one.
+### 4. Need a virtiofs daemon, let's build one.
 
 * cd qemu
 * make -j 8 virtiofsd
@@ -64,7 +64,7 @@ Now we have virtio fs daemon binary at **$PWD/qemu/virtiofsd**
 
 ------------
 
-### Let's build a Fedora root file system based on F32:
+### 5. Let's build a Fedora root file system based on F32:
 * mkdir $PWD/virtio-fs-root
 * dnf --installroot=$PWD/virtio-fs-root --releasever=32 install system-release vim-minimal systemd passwd dnf rootfiles pciutils
 
@@ -113,7 +113,7 @@ Now we have virtio fs daemon binary at **$PWD/qemu/virtiofsd**
 
 --------------
 
-### Let's Boot PowerPC KVM guest using qemu cmdline with virtio-fs
+### 6. Let's Boot PowerPC KVM guest using qemu cmdline with virtio-fs
 
 *  $PWD/qemu/virtiofsd -o vhost_user_socket=/tmp/vhostqemu -o source=$PWD/virtio-fs-root -o cache=none &
 > this command starts the virtio fs daemon in background
