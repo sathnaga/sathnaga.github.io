@@ -1,9 +1,16 @@
 # How to boot a PowerPC KVM guest from virtio-fs
 
+## Introduction:
+Virtio-fs is a shared file system that lets virtual machines access a directory tree on the host. Unlike existing approaches, it is designed to offer local file system semantics and performance.
+Virtio-fs was started at Red Hat and is being developed in the Linux, QEMU, FUSE, and Kata Containers communities that are affected by code changes. More details on virtio-fs can be found [here](https://virtio-fs.gitlab.io/).
+
+*This blog gives a step by step guide on how to setup an PowerPC KVM Environment to boot a KVM guest from virtio-fs as rootfs.*
+
 ## Environment used:
 
 * HW: [MiHawk 2U2S Power9](https://openpowerfoundation.org/?resource_lib=wistron-corp-p93d2-2p-mihawk)
 * Host OS: Fedora 31
+* Kernel: 5.7.0-rc5-g752f08972
 
 
 ## Steps:
@@ -16,7 +23,7 @@
 
 --------------
 
-### 2. Need a Guest kernel that supports virtio-fs as bootdisk, let's build one.
+### 2. Needs a Guest kernel that supports virtio-fs as bootdisk, let's build one.
 
 *Get kernel:*
 * git clone https://github.com/sathnaga/linux -b virtio-fs
@@ -26,7 +33,7 @@
 >
 >    * Patch from https://patchwork.kernel.org/patch/11134865/mbox to get virtio-fs as rootfs support.
 >
->    * Patch to enable support on guest kernel
+>    * Patch to enable virtio fs support on guest kernel.
 
 
 *Compile kernel:*
@@ -35,11 +42,11 @@
 * make -j 120 -s
 * cd ..
 
-Now we have guest kernel ready at **$PWD/linux/vmlinux**
+Now we have guest kernel at **$PWD/linux/vmlinux**
 
 --------------
 
-### 3. Need a qemu that supports virtio-fs, let's build one.
+### 3. Needs a qemu that supports virtio-fs, let's build one.
 
 *Get Qemu:*
 * git clone https://gitlab.com/virtio-fs/qemu.git
@@ -54,7 +61,7 @@ Now we have qemu binary at **$PWD/qemu/ppc64-softmmu/qemu-system-ppc64**
 
 --------------
 
-### 4. Need a virtiofs daemon, let's build one.
+### 4. Needs a virtiofs daemon, let's build one.
 
 * cd qemu
 * make -j 8 virtiofsd
@@ -82,15 +89,15 @@ Now we have virtio fs daemon binary at **$PWD/qemu/virtiofsd**
 * Edit password field of $PWD/virtio-fs-root/etc/shadow with above md5sum password.
     > Before edit:
     >
-    > $ head -1 virtio-fs-root/etc/shadow
+    > $ head -1 $PWD/virtio-fs-root/etc/shadow
     >
     > root:*:18292:0:99999:7:::
     >
     > After edit:
     >
-    > $ head -1 virtio-fs-root/etc/shadow
+    > $ head -1 $PWD/virtio-fs-root/etc/shadow
     > root:$1$sWUb0J.r$cyjCLYRfstQ0xEHVZ45UZ/:18292:0:99999:7:::
-*  mknod virtio-fs-root/dev/hvc0 c 1 2
+*  mknod $PWD/virtio-fs-root/dev/hvc0 c 1 2
     > This creates serial device for guest console
 
 * cp $PWD/virtio-fs-root/usr/lib/systemd/system/serial-getty@.service  $PWD/virtio-fs-root/etc/systemd/system/getty.target.wants/serial-getty@hvc0.service
@@ -113,12 +120,12 @@ Now we have virtio fs daemon binary at **$PWD/qemu/virtiofsd**
 
 --------------
 
-### 6. Let's Boot PowerPC KVM guest using qemu cmdline with virtio-fs
+### 6. Let's Boot PowerPC KVM guest using qemu cmdline with virtio-fs.
 
 *  $PWD/qemu/virtiofsd -o vhost_user_socket=/tmp/vhostqemu -o source=$PWD/virtio-fs-root -o cache=none &
 > this command starts the virtio fs daemon in background
 
-* Run below qemu command
+* Run below qemu command to start a KVM guest
 ```
 $PWD/qemu/ppc64-softmmu/qemu-system-ppc64 \
  -m 4096 -object memory-backend-file,id=mem,size=4G,mem-path=/dev/shm,share=on -numa node,memdev=mem \
@@ -196,7 +203,7 @@ Linux localhost 5.7.0-rc5-g7aa8a99a5-dirty #5 SMP Tue May 12 07:33:17 EDT 2020 p
 > _**Now We have PowerPC KVM guest booted with virtio-fs as bootdisk.**_
 
 
-This blog is written based on below reference documents on virtio-fs and my additional steps that are needed for PowerPC environment.
+This blog is written based on below reference documents on virtio-fs and my additional steps that are needed to setup PowerPC environment.
 * [https://virtio-fs.gitlab.io/howto-qemu.html](https://virtio-fs.gitlab.io/howto-qemu.html)
 * [https://virtio-fs.gitlab.io/howto-boot.html](https://virtio-fs.gitlab.io/howto-qemu.html)
 
