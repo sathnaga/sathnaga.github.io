@@ -28,13 +28,13 @@ Virtio-fs was started at Red Hat and is being developed in the Linux, QEMU, FUSE
 *Get kernel:*
 * `git clone https://github.com/sathnaga/linux -b virtio-fs`
 
-    >
-    >
-    > Above kernel has two additional patches from mainline:
+    > Mainline kernel has support for virtio-fs already, my above branch has
+    > two additional patches to get rootfs feature and kernel configs
+    > to enable it for my defconfig used below:
     >
     >    * Patch from https://patchwork.kernel.org/patch/11134865/mbox to get virtio-fs as rootfs support.
     >
-    >    * Patch to enable virtio fs support on guest kernel.
+    >    * Patch to enable virtio fs kernel configs to support on guest kernel.
 
 
 *Compile kernel:*
@@ -50,7 +50,10 @@ Now we have guest kernel at **$PWD/linux/vmlinux**
 ### 3. Needs a qemu that supports virtio-fs, let's build one.
 
 *Get Qemu:*
-* `git clone https://gitlab.com/virtio-fs/qemu.git`
+* `git clone https://github.com/qemu/qemu.git`
+> this blog used code from master branch commit: [debe78ce14bf8f8940c2bdf3ef387505e9e035a9](https://github.com/qemu/qemu/commit/debe78ce14bf8f8940c2bdf3ef387505e9e035a9)
+
+
 
 *Compile Qemu:*
 * `cd qemu`
@@ -123,7 +126,7 @@ Now we have virtio fs daemon binary at **$PWD/qemu/virtiofsd**
 
 ### 6. Let's Boot PowerPC KVM guest using qemu cmdline with virtio-fs.
 
-*  `$PWD/qemu/virtiofsd -o vhost_user_socket=/tmp/vhostqemu -o source=$PWD/virtio-fs-root -o cache=none &`
+*  `$PWD/qemu/virtiofsd -o --socket-path=/tmp/vhostqemu -o source=$PWD/virtio-fs-root -o cache=none &`
 > this command starts the virtio fs daemon in background
 
 * Run below qemu command to start a KVM guest
