@@ -11,6 +11,15 @@
   position: relative;
 }
 
+.site-title::before {
+	content: url("/favicon-32x32.png");
+	display: inline-block;
+	position: relative;
+	width: 50px;
+	top: 5px;
+	float: left;
+}
+
 .site-title {
   @include relative-font-size(1.625);
   font-weight: 300;
