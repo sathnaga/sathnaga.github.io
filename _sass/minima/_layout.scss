@@ -12,10 +12,10 @@
 }
 
 .site-title::before {
-	content: url("/favicon-32x32.png");
+	content: url("/favicon-64x64.png");
 	display: inline-block;
 	position: relative;
-	width: 50px;
+	width: 64px;
 	top: 5px;
 	float: left;
 }
