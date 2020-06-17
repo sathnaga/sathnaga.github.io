@@ -1,12 +1,19 @@
 title: Software Testing With Fun!
-email: sathnaga86@gmail.com
+author:
+  name: Satheesh Rajendran
+  email: sathnaga86@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Blog that would concentrate on software testing
   techniques and tools for linux, KVM areas and DevOps.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: sathnaga86
-github_username:  sathnaga
+
+show_excerpts: false
+
+minima:
+  social_links:
+    twitter: sathnaga86
+    github: sathnaga
+    linkedin: sathnaga86
+
 google_analytics: UA-131048348-1
 
 # Build settings
@@ -14,3 +21,4 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
