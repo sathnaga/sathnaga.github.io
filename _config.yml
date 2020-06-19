@@ -16,6 +16,10 @@ minima:
 
 google_analytics: UA-131048348-1
 
+header_pages:
+ - about.md
+ - bio.md
+
 # Build settings
 theme: minima
 plugins:
