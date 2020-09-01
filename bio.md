@@ -28,9 +28,7 @@ Linux Kernel, Python, Linux KVM, Testing, Automation, Git, Debugging, Ansible.
 
 *	Designed & developed in house end to end automation framework for continuous testing using Jenkins and python. Contribution was appreciated and acknowledged with Agile Excellence Award.
 
-*	Designed & developed open-source automation framework for running tests on Openpower machines [tests](https://github.com/open-power-host-os/tests).
-
-*	Developed an end to end automated upstream Virtualization Testing [Framework](https://sathnaga86.com/2018/11/29/devops-per-patch-kvmci.html).
+*	Designed & developed open-source automation framework for running tests on Openpower machines [tests](https://github.com/open-power-host-os/tests).<br>
 
 
 *   Maintainer of following Open-source Linux/Virtualization test frameworks:
@@ -38,7 +36,10 @@ Linux Kernel, Python, Linux KVM, Testing, Automation, Git, Debugging, Ansible.
 	2. [avocado-vt](https://github.com/avocado-framework/avocado-vt/)
 	3. [tp-libvirt](https://github.com/autotest/tp-libvirt)
 	4. [tp-qemu](https://github.com/autotest/tp-libvirt)
-	5. [tests](https://github.com/open-power-host-os/tests).
+	5. [tests](https://github.com/open-power-host-os/tests).<br>
+
+
+*	Developed an end to end automated upstream Virtualization Testing [Framework](https://sathnaga86.com/2018/11/29/devops-per-patch-kvmci.html).
 
 
 *	Open-Source Contributions:
@@ -50,12 +51,12 @@ Linux Kernel, Python, Linux KVM, Testing, Automation, Git, Debugging, Ansible.
 	6. [Openpower tests commits](https://github.com/open-power-host-os/tests/search?q=sathnaga&type=Commits)
 	7. [optest commits](https://github.com/open-power/op-test/search?q=sathnaga&type=Commits)
 	8. [Qemu Commits](https://github.com/qemu/qemu/search?q=sathnaga&type=Commits)
-	9. [Linux Kernel Commits](https://github.com/torvalds/linux/search?q=sathnaga&type=Commits).
+	9. [Linux Kernel Commits](https://github.com/torvalds/linux/search?q=sathnaga&type=Commits).<br>
 
 
 * 	Authored Testing [Blogs](https://sathnaga86.com/).
 
-*	Got [Open Source Strategic Committer](https://www.youracclaim.com/badges/96059928-8910-408e-854a-0c3e7d06dceb) badge issued by IBM.
+*	Got [Open Source Strategic Committer](https://www.youracclaim.com/badges/96059928-8910-408e-854a-0c3e7d06dceb) badge issued by IBM.<br>
 
 
 #### WIPRO [Software Engineer(Automation Test Engineer)] - `Dec2007 - Aug2011`
