@@ -6,19 +6,19 @@ permalink: /bio/
 
 # Satheesh Rajendran
 
-  [sathnaga86@gmail.com](mailto:sathnaga86@gmail.com)  ||  _Website:_ [https://sathnaga86.com](https://sathnaga86.com) || +919739723527 || [Linkedin](https://in.linkedin.com/in/sathnaga86) 
+  [sathnaga86@gmail.com](mailto:sathnaga86@gmail.com)  ||  _Website:_ [https://sathnaga86.com](https://sathnaga86.com) || +919739723527 || [Linkedin](https://in.linkedin.com/in/sathnaga86)
 
 ![](https://avatars0.githubusercontent.com/u/1841809?s=70&v=3)
 
 ## SUMMARY
-Experience in testing Linux kernel, Linux KVM and automate tests.
-Designed, implemented automation framework using Python.
-Have authored many DevOps blogs.
+Experience in testing Linux kernel, Linux KVM, test development and automation.
+Designed, implemented Automation Frameworks using Python.
+Have authored many DevOps/Testing blogs.
 Designed, implemented end-to-end per patch KVM Upstream Continuous Integration framework.
-Have authored more than 350+ contributions to various open-source projects @ [github](https://github.com/sathnaga).
+Have authored more than 370+ contributions to various open-source projects @ [github](https://github.com/sathnaga).
 
 ### SKILLS:
-Linux Kernel, Python, Linux KVM, Testing, Git, Debugging.
+Linux Kernel, Python, Linux KVM, Testing, Automation, Git, Debugging, Ansible.
 
 ### EXPERIENCE
 #### IBM [Advisory Software Engineer( Automation Test Specialist)] - `Sep2011 - Now`
@@ -30,13 +30,16 @@ Linux Kernel, Python, Linux KVM, Testing, Git, Debugging.
 
 *	Designed & developed open-source automation framework for running tests on Openpower machines [tests](https://github.com/open-power-host-os/tests).
 
-*	Maintainer of following Open-source Linux/Virtualization test frameworks:
-	1. [avocado-vt](https://github.com/avocado-framework/avocado-vt/)
-	2. [tp-libvirt](https://github.com/autotest/tp-libvirt)
-	3. [tp-qemu](https://github.com/autotest/tp-libvirt)
-	4. [tests](https://github.com/open-power-host-os/tests).
-
 *	Developed an end to end automated upstream Virtualization Testing [Framework](https://sathnaga86.com/2018/11/29/devops-per-patch-kvmci.html).
+
+
+*   Maintainer of following Open-source Linux/Virtualization test frameworks:
+	1. [avocado](https://github.com/avocado-framework/avocado/)
+	2. [avocado-vt](https://github.com/avocado-framework/avocado-vt/)
+	3. [tp-libvirt](https://github.com/autotest/tp-libvirt)
+	4. [tp-qemu](https://github.com/autotest/tp-libvirt)
+	5. [tests](https://github.com/open-power-host-os/tests).
+
 
 *	Open-Source Contributions:
 	1. [avocado-vt commits](https://github.com/avocado-framework/avocado-vt/search?q=sathnaga&type=Commits)
@@ -49,7 +52,11 @@ Linux Kernel, Python, Linux KVM, Testing, Git, Debugging.
 	8. [Qemu Commits](https://github.com/qemu/qemu/search?q=sathnaga&type=Commits)
 	9. [Linux Kernel Commits](https://github.com/torvalds/linux/search?q=sathnaga&type=Commits).
 
+
 * 	Authored Testing [Blogs](https://sathnaga86.com/).
+
+*	Got [Open Source Strategic Committer](https://www.youracclaim.com/badges/96059928-8910-408e-854a-0c3e7d06dceb) badge issued by IBM.
+
 
 #### WIPRO [Software Engineer(Automation Test Engineer)] - `Dec2007 - Aug2011`
 
