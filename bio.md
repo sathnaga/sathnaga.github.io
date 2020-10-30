@@ -56,7 +56,7 @@ Linux Kernel, Python, Linux KVM, Testing, Automation, Git, Debugging, Ansible.
 
 * 	Authored Testing [Blogs](https://sathnaga86.com/).
 
-*	Got [Open Source Strategic Committer](https://www.youracclaim.com/badges/96059928-8910-408e-854a-0c3e7d06dceb) badge issued by IBM.<br>
+*	Earned [Open Source Strategic Committer](https://www.youracclaim.com/badges/96059928-8910-408e-854a-0c3e7d06dceb) badge issued by IBM.<br>
 
 
 #### WIPRO [Software Engineer(Automation Test Engineer)] - `Dec2007 - Aug2011`
