@@ -15,7 +15,7 @@ Experience in testing Linux kernel, Linux KVM, test development and automation.
 Designed, implemented Automation Frameworks using Python.
 Have authored many DevOps/Testing blogs.
 Designed, implemented end-to-end per patch KVM Upstream Continuous Integration framework.
-Have authored more than 370+ contributions to various open-source projects @ [github](https://github.com/sathnaga).
+Have authored more than 380+ contributions to various open-source projects @ [github](https://github.com/sathnaga).
 
 ### SKILLS:
 Linux Kernel, Python, Linux KVM, Testing, Automation, Git, Debugging, Ansible.
