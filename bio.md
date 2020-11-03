@@ -18,7 +18,7 @@ Designed, implemented end-to-end per patch KVM Upstream Continuous Integration f
 Have authored more than 380+ contributions to various open-source projects @ [github](https://github.com/sathnaga).
 
 ### SKILLS:
-Linux Kernel, Python, Linux KVM, Testing, Automation, Git, Debugging, [Ansible](resources/Ansible_Certificate.png).
+Linux Kernel, Python, Linux KVM, Testing, Automation, Git, Debugging, [Ansible](https://github.com/sathnaga/sathnaga.github.io/blob/master/resources/Ansible_Certificate.pdf).
 
 ### EXPERIENCE
 #### IBM [Advisory Software Engineer( Automation Test Specialist)] - `Sep2011 - Now`
