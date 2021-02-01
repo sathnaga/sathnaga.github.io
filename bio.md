@@ -21,7 +21,11 @@ Have authored more than 380+ contributions to various open-source projects @ [gi
 Linux Kernel, Python, Linux KVM, Testing, Automation, Git, Debugging, [Ansible](https://github.com/sathnaga/sathnaga.github.io/blob/master/resources/Ansible_Certificate.pdf).
 
 ### EXPERIENCE
-#### IBM [Advisory Software Engineer( Automation Test Specialist)] - `Sep2011 - Now`
+#### Nutanix [Senior Member of Technical Staff] - `Feb2021 - Now`
+
+
+
+#### IBM [Advisory Software Engineer( Automation Test Specialist)] - `Sep2011 - Jan2021`
 *       Enable CI to Agile S{D,T}LC and Automate Tests.
 
 *	Validate KVM Functionalities.
