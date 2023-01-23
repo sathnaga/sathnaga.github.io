@@ -18,12 +18,14 @@ Designed, implemented end-to-end per patch KVM Upstream Continuous Integration f
 Have authored more than 380+ contributions to various open-source projects @ [github](https://github.com/sathnaga).
 
 ### SKILLS:
-Linux Kernel, Python, Linux KVM, Testing, Automation, Git, Debugging, [Ansible](https://github.com/sathnaga/sathnaga.github.io/blob/master/resources/Ansible_Certificate.pdf).
+Linux Kernel, Python, Linux KVM, Testing, Automation, Git, Debugging, pytest, API Testing, [Ansible](https://github.com/sathnaga/sathnaga.github.io/blob/master/resources/Ansible_Certificate.pdf).
 
 ### EXPERIENCE
-#### Nutanix [Senior Member of Technical Staff] - `Feb2021 - Now`
+#### Break - `Jan2023 - Now`
 
-
+#### Nutanix [Senior Member of Technical Staff] - `Feb2021 - Dec2022`
+* 	Strengthened/stabilised API test framework to make sure a smooth regression execution for a enterprise [cloud automation application](https://portal.nutanix.com/page/documents/solutions/details?targetId=RA-2093-Nutanix-Calm:RA-2093-Nutanix-Calm)
+*	Developed API test framework for strategic Saas product.
 
 #### IBM [Advisory Software Engineer( Automation Test Specialist)] - `Sep2011 - Jan2021`
 *       Enable CI to Agile S{D,T}LC and Automate Tests.
