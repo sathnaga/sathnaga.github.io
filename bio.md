@@ -21,14 +21,13 @@ Have authored more than 380+ contributions to various open-source projects @ [gi
 Linux Kernel, Python, Linux KVM, Testing, Automation, Git, Debugging, pytest, API Testing, [Ansible](https://github.com/sathnaga/sathnaga.github.io/blob/master/resources/Ansible_Certificate.pdf).
 
 ### EXPERIENCE
-#### Break - `Jan2023 - Now`
 
-#### Nutanix [Senior Member of Technical Staff] - `Feb2021 - Dec2022`
+#### Nutanix [Senior Member of Technical Staff] - `Feb2021 - Now`[Break - `Jan2023 - Apr2023`]
 * 	Strengthened/stabilised API test framework to make sure a smooth regression execution for a enterprise [cloud automation application](https://portal.nutanix.com/page/documents/solutions/details?targetId=RA-2093-Nutanix-Calm:RA-2093-Nutanix-Calm)
 *	Developed API test framework for strategic Saas product.
 
 #### IBM [Advisory Software Engineer( Automation Test Specialist)] - `Sep2011 - Jan2021`
-*       Enable CI to Agile S{D,T}LC and Automate Tests.
+*   Enable CI to Agile S{D,T}LC and Automate Tests.
 
 *	Validate KVM Functionalities.
 
