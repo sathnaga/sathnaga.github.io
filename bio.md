@@ -22,8 +22,9 @@ Linux Kernel, Python, Linux KVM, Testing, Automation, Git, Debugging, pytest, AP
 
 ### EXPERIENCE
 
-#### Nutanix [Senior Member of Technical Staff] - `Feb2021 - Now`[Break - `Jan2023 - Apr2023`]
-* 	Strengthened/stabilised API test framework to make sure a smooth regression execution for a enterprise [cloud automation application](https://portal.nutanix.com/page/documents/solutions/details?targetId=RA-2093-Nutanix-Calm:RA-2093-Nutanix-Calm)
+#### Nutanix [Staff Engineer] - `Feb2021 - Now`[Break - `Jan2023 - Apr2023`]
+* Driving continuous improvements in optimizing test infrastructure, tools, and methodologies to enhance efficiency and scalability.
+* Strengthened/stabilised API test framework to make sure a smooth regression execution for a enterprise [cloud automation application](https://portal.nutanix.com/page/documents/solutions/details?targetId=RA-2093-Nutanix-Calm:RA-2093-Nutanix-Calm)
 *	Developed API test framework for strategic Saas product.
 
 #### IBM [Advisory Software Engineer( Automation Test Specialist)] - `Sep2011 - Jan2021`
