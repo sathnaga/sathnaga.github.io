@@ -1,10 +1,10 @@
-title: Software Testing With Fun!
+title: Linux, Cloud, DevOps & Beyond: A Deep Dive into Testing!
 author:
   name: Satheesh Rajendran
   email: sathnaga86@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Blog that would concentrate on software testing
-  techniques and tools for linux, KVM, cloud areas and DevOps.
+  techniques and tools for Linux, KVM, Cloud areas and DevOps.
 
 show_excerpts: false
 
